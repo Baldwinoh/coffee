@@ -1,14 +1,97 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>
+            Baldwino's Coffe Shop
+        </ion-title>
+    </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+    <button ion-button full stack color="secondary" (click)="orderPage()">show</button>
+    <div id="cup1">
+
+        <ion-list radio-group>
+            <ion-list-header text-center>
+                Choose Coffee
+            </ion-list-header>
+
+            <ion-item>
+                <ion-icon name="logo-facebook" item-start></ion-icon>
+                Followers
+                <ion-badge item-end>260k</ion-badge>
+            </ion-item>
+            <ion-item>
+                <ion-label>Cappuccino</ion-label>
+                <ion-checkbox color="dark" [(ngModel)]="cap">Cappuccino</ion-checkbox>
+            </ion-item>
+        </ion-list>
+
+        <img src="./assets/imgs/images1.jpg">
+
+
+        <h2 text-center>{{Cappuccino}}</h2>
+
+    </div>
+
+
+    <div id="cup2">
+
+        <ion-list radio-group>
+
+
+
+            <ion-item>
+                <ion-label>African Coffee</ion-label>
+                <ion-checkbox color="dark" [(ngModel)]="afri">African Coffee</ion-checkbox>
+            </ion-item>
+        </ion-list>
+
+        <img src="./assets/imgs/images2.jpg">
+
+
+        <h2 text-center>{{affricanCofee}}</h2>
+
+    </div>
+
+    <div id="cup3">
+
+        <ion-list radio-group>
+
+
+
+            <ion-item>
+                <ion-label>Baldwino's</ion-label>
+                <ion-checkbox color="dark" [(ngModel)]="bald">Baldwino's</ion-checkbox>
+            </ion-item>
+        </ion-list>
+
+        <img src="./assets/imgs/images3.jpg">
+
+        <h2 text-center>{{BaldwinoCoffe}}</h2>
+
+    </div>
+
+    <div id="cup4">
+        <ion-list radio-group>
+
+
+
+            <ion-item>
+                <ion-label>Temisan Coffee</ion-label>
+                <ion-checkbox color="dark" [(ngModel)]="temb">Temisan Coffee</ion-checkbox>
+            </ion-item>
+        </ion-list>
+
+        <img src="./assets/imgs/images4.jpg">
+
+        <h2 text-center>{{tembisan}}</h2>
+    </div>
+
+    <P>Qantity</P>
+    <ion-col col-6><button ion-button color="light" (click)="Quantity(+1)">ADD</button></ion-col>
+    <ion-col col-6><button ion-button color="light" (click)="Quantity(-1)">Reduce</button></ion-col>
+    <p>{{quantity}}</p>
+    <p>{{price}}</p>
+    <button ion-button full stack color="secondary" (click)="letsClear()" (click)="clear()">Clear</button>
+    <button ion-button full stack color="secondary" (click)="purchase()">order</button>
 </ion-content>
