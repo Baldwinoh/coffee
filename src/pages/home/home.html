@@ -87,11 +87,12 @@
         <h2 text-center>{{tembisan}}</h2>
     </div>
 
+
     <P>Qantity</P>
     <ion-col col-6><button ion-button color="light" (click)="Quantity(+1)">ADD</button></ion-col>
     <ion-col col-6><button ion-button color="light" (click)="Quantity(-1)">Reduce</button></ion-col>
-    <p>{{quantity}}</p>
-    <p>{{price}}</p>
+    <p>The number of ordered items:{{quantity}}</p>
+    <p>The total price of your order is R{{price}}</p>
     <button ion-button full stack color="secondary" (click)="letsClear()" (click)="clear()">Clear</button>
     <button ion-button full stack color="secondary" (click)="purchase()">order</button>
 </ion-content>

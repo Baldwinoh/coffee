@@ -30,7 +30,9 @@ this.calcCost();
 
 calcCost():number{
   this.price=this.tembisan*this.quantity;
-
+  this.price=this.Cappuccino*this.quantity;
+  this.price=this.BaldwinoCoffe*this.quantity;
+  this.price=this.affricanCofee*this.quantity;
 
 if(this.cap){
 this.price=(this.Cappuccino)*this.quantity;
@@ -75,17 +77,17 @@ orderPage():void{
 
 letsClear() {
   const confirm = this.alertCtrl.create({
-    title: 'Use this lightsaber?',
-    message: 'Do you agree to use this lightsaber to do good across the intergalactic galaxy?',
+    title: 'Are you sure you want to clear?',
+    message: '',
     buttons: [
       {
-        text: 'Disagree',
+        text: 'No',
         handler: () => {
           console.log('Disagree clicked');
         }
       },
       {
-        text: 'Agree',
+        text: 'Yes',
         handler: () => {
           console.log('Agree clicked');
         }
